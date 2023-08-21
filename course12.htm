@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Structure and algorithm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1; /* Updated background color */
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #666;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      color: #666;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #333;
+    }
+
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode p,
+    body.dark-mode li {
+      color: #f5f5f5;
+    }
+
+    .dark-mode-toggle {
+      background-color: transparent;
+      border: none;
+      color: #333;
+      font-size: 24px;
+      cursor: pointer;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .dark-mode-toggle.dark-mode {
+      color: #f5f5f5;
+    }
+
+    #course-video {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .course-description {
+      margin-bottom: 20px;
+    }
+
+    .course-contents {
+      margin-top: 20px;
+    }
+    
+    .other-courses {
+      margin-top: 20px;
+    }
+    
+    .other-courses a {
+      display: block;
+      margin-bottom: 10px;
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .course-description {
+      margin-bottom: 20px;
+    }
+
+    .course-contents {
+      margin-top: 20px;
+    }
+    
+    .course-reviews {
+      text-align: center; /* Center-align the review section */
+      margin-top: 30px; /* Add some space between previous content and reviews */
+    }
+
+    #review-form {
+      max-width: 400px; /* Limit the width of the review form */
+      margin: 0 auto; /* Center-align the form within the review section */
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <iframe width="800" height="415" src="https://www.youtube.com/embed/b7GC4Zr74M0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h1 id="course-title"></h1>
+    <div class="course-description">
+      <h2>Course Description:</h2>
+      <p>
+        The Introduction to Internet of Things (IoT) course provides an in-depth understanding of the fundamental concepts, principles, and technologies behind the IoT revolution. This course is designed to equip students with the knowledge and skills required to harness the power of connected devices, sensors, and data for building smart and innovative solutions
+      </p>
+    </div>
+    <div class="course-contents">
+      <h3>Course Contents</h3>
+      <ul id="course-contents">
+        <li>Introduction to data structures</li>
+        <li>Arrays and linked lists</li>
+        <li>Stacks and queues</li>
+        <li>Trees and graphs</li>
+        <li>Sorting algorithms</li>
+        <li>Searching algorithms</li>
+        <li>Recursion</li>
+        <li>Big O Notation</li>
+        <li>Complexity Analysis</li>
+        <li>Data Structure Selection</li>
+      </ul>
+      <p>
+        By the end of this course, students will have a solid foundation in data structures and algorithms, enabling them to
+        design and implement efficient solutions for a wide range of computational problems. Whether you are a beginner or an
+        experienced programmer, this course will enhance your problem-solving skills and
+        equip you with the tools needed to excel in software development and computer science domains.
+      </p>
+    </div>
+
+   
+  </div>
+  <div class="course-reviews">
+    <h3>Course Reviews</h3>
+    <form id="review-form">
+      <label for="rating">Rating:</label>
+      <select id="rating" name="rating">
+        <option value="5">5 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="2">2 Stars</option>
+        <option value="1">1 Star</option>
+      </select>
+      <br>
+      <label for="comment">Write a review:</label>
+      <textarea id="comment" name="comment" rows="4" cols="50" required></textarea>
+      <br>
+      <button type="submit">Submit Review</button>
+    </form>
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <i id="dark-mode-icon" class="fas fa-moon"></i>
+  </button>
+
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle("dark-mode");
+
+      const icon = document.getElementById("dark-mode-icon");
+      if (body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      }
+    }
+    const reviewForm = document.getElementById("review-form");
+  reviewForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get the user's rating and review comment
+    const rating = document.getElementById("rating").value;
+    const comment = document.getElementById("comment").value;
+
+    // You can implement code here to handle the review submission,
+    // such as sending the data to a server or storing it locally.
+
+    // For now, let's log the data to the console
+    console.log("Rating:", rating);
+    console.log("Comment:", comment);
+
+    // You can also display a success message to the user
+    alert("Thank you for your review!");
+  });
+  </script>
+</body>
+</html>

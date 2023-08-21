@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Artificial Intelligence</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  
+    body {
+      font-family: Roboto, sans-serif;
+      background-color: #f5f5f5;
+    }
+  
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    li {
+      margin-bottom: 5px;
+    }
+  
+    .course-description {
+      margin-bottom: 20px;
+    }
+  
+    .course-contents {
+      margin-top: 20px;
+    }
+  
+    .course-reviews {
+      text-align: center;
+      margin-top: 30px;
+    }
+  
+    #review-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .review-label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  
+    #rating, #comment {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+  
+    .submit-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out;
+    }
+  
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+  
+    #course-video {
+      width: 100%; /* Adjust the width to fit the container */
+      height: auto; /* Maintain the aspect ratio */
+    }
+    .assessment-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out;
+    }
+  
+    .assessment-button:hover {
+      background-color: #0056b3;
+    }
+    .assessment {
+  text-align: center;
+  margin-top: 30px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <iframe width="800" height="415" src="https://www.youtube.com/embed/JMUxmLyrhSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h1>Artificial Intelligence</h1>
+    <div class="course-description">
+      <h2>Course Description:</h2>
+      <p>
+        This course provides a comprehensive introduction to the field of Artificial Intelligence (AI), focusing on the fundamental concepts, techniques, and applications. Students will gain a solid understanding of the theoretical foundations and practical aspects of AI, enabling them to develop intelligent systems and apply AI techniques to solve real-world problems.
+      </p>
+
+    </div>
+    <div class="course-contents">
+      <h3>Course Contents</h3>
+      <ul id="course-contents">
+        <li>Introduction to Artificial Intelligence</li>
+        <li>Problem Solving and Search Algorithms</li>
+        <li>Machine Learning Fundamentals</li>
+        <li>Supervised Learning Algorithms</li>
+        <li>Unsupervised Learning and Clustering</li>
+        <li>Natural Language Processing</li>
+        <li>Computer Vision and Image Recognition</li>
+        <li>Reinforcement Learning Concepts</li>
+        <li>Ethical Considerations in AI</li>
+        <li>AI Project: Building a Smart Application</li>
+    </ul>
+
+    <p>
+      At the end of this educational journey, participants will possess a solid comprehension of artificial intelligence concepts and techniques, empowering them to develop intelligent systems and applications. Irrespective of your background in AI, whether novice or seasoned, this course will refine your problem-solving abilities in the realm of artificial intelligence and equip you with the essential tools to thrive in AI-related fields.
+    </p>
+
+  </div>
+
+    </div>
+    <div class="assessment">
+      <a href="assessment5.html" class="assessment-button">Click to view Assessment on this course</a>
+    </div>
+  </div>
+  <div class="course-reviews">
+    <h3>Course Reviews</h3>
+    <form id="review-form">
+      <label for="rating" class="review-label">Rating:</label>
+      <select id="rating" name="rating">
+        <option value="5">5 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="2">2 Stars</option>
+        <option value="1">1 Star</option>
+      </select>
+      <label for="comment" class="review-label">Write a review:</label>
+      <textarea id="comment" name="comment" rows="4" required></textarea>
+      <button type="submit" class="submit-button">Submit Review</button>
+    </form>
+  </div>
+
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <i id="dark-mode-icon" class="fas fa-moon"></i>
+  </button>
+  
+
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle("dark-mode");
+
+      const icon = document.getElementById("dark-mode-icon");
+      if (body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      }
+    }
+    const reviewForm = document.getElementById("review-form");
+  reviewForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get the user's rating and review comment
+    const rating = document.getElementById("rating").value;
+    const comment = document.getElementById("comment").value;
+
+    // You can implement code here to handle the review submission,
+    // such as sending the data to a server or storing it locally.
+
+    // For now, let's log the data to the console
+    console.log("Rating:", rating);
+    console.log("Comment:", comment);
+
+    // You can also display a success message to the user
+    alert("Thank you for your review!");
+  });
+  </script>
+</body>
+</html>

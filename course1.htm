@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Structure and Algorithm Course</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  
+    body {
+      font-family: Roboto, sans-serif;
+      background-color: #f5f5f5;
+    }
+  
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    li {
+      margin-bottom: 5px;
+    }
+  
+    .course-description {
+      margin-bottom: 20px;
+    }
+  
+    .course-contents {
+      margin-top: 20px;
+    }
+  
+    .course-reviews {
+      text-align: center;
+      margin-top: 30px;
+    }
+  
+    #review-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .review-label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  
+    #rating, #comment {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+  
+    .submit-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out;
+    }
+  
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+  
+    #course-video {
+      width: 100%; /* Adjust the width to fit the container */
+      height: auto; /* Maintain the aspect ratio */
+    }
+    .assessment-button {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out;
+    }
+  
+    .assessment-button:hover {
+      background-color: #0056b3;
+    }
+    .assessment {
+  text-align: center;
+  margin-top: 30px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bum_19loj9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h1>Data Structure and Algorithm Course</h1>
+    <div class="course-description">
+      <h2>Course Description:</h2>
+      <p>
+        This course provides a comprehensive introduction to the principles
+        and practices of organizing and processing data effectively. Through a combination of theoretical explanations,
+        practical examples, and hands-on exercises, this course equips students with the knowledge and skills to design,
+        implement, and analyze various data structures and algorithms.
+      </p>
+    </div>
+    <div class="course-contents">
+      <h3>Course Contents</h3>
+      <ul>
+        <li>Introduction to data structures</li>
+        <li>Arrays and linked lists</li>
+        <li>Stacks and queues</li>
+        <li>Trees and graphs</li>
+        <li>Sorting algorithms</li>
+        <li>Searching algorithms</li>
+        <li>Recursion</li>
+        <li>Big O Notation</li>
+        <li>Complexity Analysis</li>
+        <li>Data Structure Selection</li>
+      </ul>
+      <p>
+        By the end of this course, students will have a solid foundation in data structures and algorithms, enabling them to
+        design and implement efficient solutions for a wide range of computational problems. Whether you are a beginner or an
+        experienced programmer, this course will enhance your problem-solving skills and
+        equip you with the tools needed to excel in software development and computer science domains.
+      </p>
+    </div>
+    <div class="assessment">
+      <a href="assessment1.html" class="assessment-button">Click to view Assessment on this course</a>
+    </div>
+  </div>
+  <div class="course-reviews">
+    <h3>Course Reviews</h3>
+    <form id="review-form">
+      <label for="rating" class="review-label">Rating:</label>
+      <select id="rating" name="rating">
+        <option value="5">5 Stars</option>
+        <option value="4">4 Stars</option>
+        <option value="3">3 Stars</option>
+        <option value="2">2 Stars</option>
+        <option value="1">1 Star</option>
+      </select>
+      <label for="comment" class="review-label">Write a review:</label>
+      <textarea id="comment" name="comment" rows="4" required></textarea>
+      <button type="submit" class="submit-button">Submit Review</button>
+    </form>
+  </div>
+
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <i id="dark-mode-icon" class="fas fa-moon"></i>
+  </button>
+  <script>
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle("dark-mode");
+
+      const icon = document.getElementById("dark-mode-icon");
+      if (body.classList.contains("dark-mode")) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      } else {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      }
+    }
+
+    const reviewForm = document.getElementById("review-form");
+    reviewForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      const rating = document.getElementById("rating").value;
+      const comment = document.getElementById("comment").value;
+      console.log("Rating:", rating);
+      console.log("Comment:", comment);
+      alert("Thank you for your review!");
+    });
+  </script>
+</body>
+</html>

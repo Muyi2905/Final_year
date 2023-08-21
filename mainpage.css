@@ -1,0 +1,256 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+
+    background-image: url('images/background\ image.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+header {
+    background-color: rgb(27, 0, 126);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.course {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: calc(33.33% - 20px);
+    vertical-align: top;
+    box-sizing: border-box;
+    margin-right: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course:nth-child(3n) {
+    margin-right: 0;
+}
+
+.course h2 {
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.course p {
+    margin: 0;
+    color: #666;
+}
+
+.course img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    color: #666;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-section {
+    background-color: #f2f2f2;
+    padding: 50px;
+    text-align: center;
+    color: #333;
+}
+
+.hero-section h2 {
+    margin: 0;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-section p {
+    margin: 0;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.course img {
+    transition: transform 0.3s ease;
+}
+
+.course img:hover {
+    transform: scale(1.1);
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.course {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu>li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.menu>li:last-child {
+    margin-right: 0;
+}
+
+.menu>li>a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica;
+    font-size: 14px;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #34495e;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease-in-out;
+}
+
+.submenu li {
+    display: block;
+}
+
+.menu>li:hover .submenu,
+.menu>li:hover .submenu li {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu>li:hover .submenu li:nth-child(even) {
+    transform: skewX(25deg) translateX(15px);
+}
+
+.menu>li:hover .submenu li:nth-child(odd) {
+    transform: skewX(-25deg) translateX(-15px);
+}
+
+.submenu>li::after {
+    content: '';
+    position: absolute;
+    top: -125%;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+}
+
+.submenu>li:nth-child(odd) {
+    transform: skewX(-25deg) translateX(0);
+}
+
+.submenu>li:nth-child(odd)>a {
+    transform: skewX(25deg);
+}
+
+.submenu>li:nth-child(odd)::after {
+    right: -50%;
+    transform: skewX(-25deg) rotate(3deg);
+}
+
+.submenu>li:nth-child(even) {
+    transform: skewX(25deg) translateX(0);
+}
+
+.submenu>li:nth-child(even)>a {
+    transform: skewX(-25deg);
+}
+
+.submenu>li:nth-child(even)::after {
+    left: -50%;
+    transform: skewX(25deg) rotate(3deg);
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Adjust header, course layout, and other elements for smaller screens */
+    header {
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .course {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* ... other adjustments ... */
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+
+    /* Further adjustments for even smaller screens */
+    .course {
+        padding: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .hamburger-menu {
+            top: 10px;
+            /* Adjust the position for better alignment */
+        }
+
+        .hamburger-icon {
+            width: 25px;
+            /* Decrease the width for better visibility */
+            height: 3px;
+            /* Adjust the height if needed */
+        }
+    }

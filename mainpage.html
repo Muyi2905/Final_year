@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LearnTech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <link rel="stylesheet" href="mainpage.css">
+  <style>
+        /* ... (your existing styles) ... */
+
+        /* Hamburger menu styles */
+        .hamburger-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .hamburger-icon {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* Dropdown menu styles */
+        .dropdown {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            background-color: #fff;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        .dropdown-content {
+            padding: 10px;
+        }
+
+        .dropdown-option {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-option:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+ </style>
+
+</head>
+<body>
+  
+  <header>
+    <h1>Learn Tech</h1>
+    <div class="hamburger-menu" id="hamburger-menu">
+      <div class="hamburger-icon"></div>
+      <div class="hamburger-icon"></div>
+      <div class="hamburger-icon"></div>
+  </div>
+  <div class="dropdown" id="dropdown">
+    <div class="dropdown-content">
+        <a href="index.php" class="dropdown-option" id="sign-out">Sign Out</a>
+    </div>
+</div>
+  </header>
+ 
+  <div class="hero-section">
+    <h2>Enhance Your Knowledge with Online Courses</h2>
+    <p>Explore our wide range of computer science courses</p>
+  </div>
+  <div class="container">
+    <div class="course">
+      <a href="course1.htm" id="course1">
+        <img src="images/data structure and alg.png" alt="Course 1">
+        <h2>Data Structure and Algorithm</h2>
+        <p>Learn about data structures and algorithms and how to apply them in problem-solving.</p>
+      </a>
+    </div>
+    <div class="course">
+      <a href="course2.htm" id="course2">
+      <img src="images/Python_Thumbnail_b6e99c74df.png" alt="Course 2">
+      <h2>Introduction to Python</h2>
+      <p>Get started with Python programming language and its applications in various domains.</p>
+    </div>
+    <div class="course">
+      <a href="course3.htm" id="course3">
+      <img src="images/web dev.jpg" alt="Course 3">
+      <h2>Web Development Fundamentals</h2>
+      <p>Learn the basics of web development, including HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="course">
+      <a href="course4.htm" id="course3">
+      <img src="images/dbms.png" alt="Course 4">
+      <h2>Database Design and Management</h2>
+      <p>Master the concepts of database design and learn how to manage and query databases.</p>
+    </div>
+    <div class="course">
+      <a href="course5.htm" id="course3">
+      <img src="images/AI.png" alt="Course 5">
+      <h2>Artificial Intelligence</h2>
+      <p>Explore the fascinating field of artificial intelligence and its real-world applications.</p>
+    </div>
+    <div class="course">
+      <a href="course6.htm" id="course3">
+      <img src="images/ML.jpg" alt="Course 6">
+      <h2>Machine Learning</h2>
+      <p>Discover the principles and techniques of machine learning and build predictive models.</p>
+    </div>
+    <div class="course">
+      <a href="course7.htm" id="course3">
+      <img src="images/fullstack.png" alt="Course 8">
+      <h2>FullStack Development</h2>
+      <p>Understand the software development life cycle and best practices in software engineering.</p>
+    </div>
+    <div class="course">
+      <a href="course8.htm" id="course3">
+      <img src="images/cloud-computing.webp" alt="Course 9">
+      <h2>Cloud Computing</h2>
+      <p>Explore the concepts and technologies behind cloud computing and its benefits.</p>
+    </div>
+    <div class="course">
+      <a href="course9.htm" id="course3">
+      <img src="images/mobile app new.jpg" alt="Course 10">
+      <h2>Mobile App Development</h2>
+      <p>Learn how to develop mobile applications for iOS and Android platforms.</p>
+    </div>
+    <div class="course">
+      <a href="course10.htm" id="course3">
+      <img src="images/cyb.cms" alt="Course 11">
+      <h2>Cybersecurity</h2>
+      <p>Protect systems and networks from cyber threats and learn about ethical hacking.</p>
+    </div>
+    <div class="course">
+      <a href="course11.htm" id="course3">
+      <img src="images/what-is-Big-Data-analytics.jpg" alt="Course 12">
+      <h2>Big Data Analytics</h2>
+      <p>Process and analyze large datasets using big data analytics tools and techniques.</p>
+    </div>
+    <div class="course">
+      <a href="course12.htm" id="course3"></a>
+      <img src="images/IOT.jpg" alt="Course 14">
+      <h2>Internet of Things (IoT)</h2>
+      <p>Discover how to build IoT devices and applications for a connected world.</p>
+    </div>
+  </div>
+  <footer>
+    &copy; LearnTech. All rights reserved. | Privacy Policy | Terms of Service
+  </footer>
+  <script>
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const dropdown = document.getElementById('dropdown');
+    const signOutLink = document.getElementById('sign-out');
+
+    hamburgerMenu.addEventListener('click', () => {
+        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    });
+</script>
+</body>
+
+</html>
+
+
+  
